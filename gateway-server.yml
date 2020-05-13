@@ -12,10 +12,9 @@ eureka:
 zuul:
     routes:
         product-catalogue-service:
-            url: http://localhost:8081
             path: /product-catalogue/**
-            # service-id: product-catalogue-service
-            # strip-prefix: true
+            service-id: product-catalogue-service
+            strip-prefix: true
         recommedation-service:
             path: /recommedation/
             service-id: recommedation-service
